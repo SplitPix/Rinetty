@@ -6,10 +6,27 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		6DF0F1081FFBAB95008CB537 /* UniversalRinety */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6DF0F1091FFBAB95008CB537 /* Build configuration list for PBXAggregateTarget "UniversalRinety" */;
+			buildPhases = (
+				6DF0F10C1FFBABC0008CB537 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalRinety;
+			productName = UniversalRinety;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		6DF0F0F81FFBAAE1008CB537 /* Rinety.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF0F0EE1FFBAAE0008CB537 /* Rinety.framework */; };
 		6DF0F0FD1FFBAAE1008CB537 /* RinetyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0F0FC1FFBAAE1008CB537 /* RinetyTests.swift */; };
 		6DF0F0FF1FFBAAE1008CB537 /* Rinety.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF0F0F11FFBAAE0008CB537 /* Rinety.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DF0F1121FFBAD06008CB537 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0F1111FFBAD06008CB537 /* RestClient.swift */; };
+		6DF0F1141FFBF24F008CB537 /* RestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0F1131FFBF24F008CB537 /* RestRouter.swift */; };
+		6DF0F1711FFCF31E008CB537 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF0F1701FFCF31E008CB537 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +46,9 @@
 		6DF0F0F71FFBAAE1008CB537 /* RinetyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RinetyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF0F0FC1FFBAAE1008CB537 /* RinetyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RinetyTests.swift; sourceTree = "<group>"; };
 		6DF0F0FE1FFBAAE1008CB537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DF0F1111FFBAD06008CB537 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		6DF0F1131FFBF24F008CB537 /* RestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRouter.swift; sourceTree = "<group>"; };
+		6DF0F1701FFCF31E008CB537 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF0F1711FFCF31E008CB537 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +77,7 @@
 				6DF0F0F01FFBAAE0008CB537 /* Rinety */,
 				6DF0F0FB1FFBAAE1008CB537 /* RinetyTests */,
 				6DF0F0EF1FFBAAE0008CB537 /* Products */,
+				6DF0F16D1FFCF17F008CB537 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +93,7 @@
 		6DF0F0F01FFBAAE0008CB537 /* Rinety */ = {
 			isa = PBXGroup;
 			children = (
+				6DF0F10D1FFBAC85008CB537 /* classes */,
 				6DF0F0F11FFBAAE0008CB537 /* Rinety.h */,
 				6DF0F0F21FFBAAE0008CB537 /* Info.plist */,
 			);
@@ -84,6 +107,23 @@
 				6DF0F0FE1FFBAAE1008CB537 /* Info.plist */,
 			);
 			path = RinetyTests;
+			sourceTree = "<group>";
+		};
+		6DF0F10D1FFBAC85008CB537 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				6DF0F1111FFBAD06008CB537 /* RestClient.swift */,
+				6DF0F1131FFBF24F008CB537 /* RestRouter.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		6DF0F16D1FFCF17F008CB537 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DF0F1701FFCF31E008CB537 /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +148,7 @@
 				6DF0F0EA1FFBAAE0008CB537 /* Frameworks */,
 				6DF0F0EB1FFBAAE0008CB537 /* Headers */,
 				6DF0F0EC1FFBAAE0008CB537 /* Resources */,
+				6DF0F16F1FFCF2A0008CB537 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -148,9 +189,14 @@
 				TargetAttributes = {
 					6DF0F0ED1FFBAAE0008CB537 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					6DF0F0F61FFBAAE1008CB537 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					6DF0F1081FFBAB95008CB537 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -170,6 +216,7 @@
 			targets = (
 				6DF0F0ED1FFBAAE0008CB537 /* Rinety */,
 				6DF0F0F61FFBAAE1008CB537 /* RinetyTests */,
+				6DF0F1081FFBAB95008CB537 /* UniversalRinety */,
 			);
 		};
 /* End PBXProject section */
@@ -191,11 +238,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6DF0F10C1FFBABC0008CB537 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "UNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\nxcodebuild -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/AlamoWater.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/\"${PROJECT_NAME}\".framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"";
+		};
+		6DF0F16F1FFCF2A0008CB537 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6DF0F0E91FFBAAE0008CB537 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF0F1141FFBF24F008CB537 /* RestRouter.swift in Sources */,
+				6DF0F1121FFBAD06008CB537 /* RestClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +414,7 @@
 		6DF0F1031FFBAAE1008CB537 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -341,12 +422,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Rinety/frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Rinety/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.splitpix.ios.libraries.Rinety;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +443,7 @@
 		6DF0F1041FFBAAE1008CB537 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -362,8 +451,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Rinety/frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Rinety/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.splitpix.ios.libraries.Rinety;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -376,6 +471,7 @@
 		6DF0F1061FFBAAE1008CB537 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 658Z86GMMJ;
 				INFOPLIST_FILE = RinetyTests/Info.plist;
@@ -390,6 +486,7 @@
 		6DF0F1071FFBAAE1008CB537 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 658Z86GMMJ;
 				INFOPLIST_FILE = RinetyTests/Info.plist;
@@ -398,6 +495,24 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6DF0F10A1FFBAB95008CB537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 658Z86GMMJ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6DF0F10B1FFBAB95008CB537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 658Z86GMMJ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -427,6 +542,15 @@
 			buildConfigurations = (
 				6DF0F1061FFBAAE1008CB537 /* Debug */,
 				6DF0F1071FFBAAE1008CB537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DF0F1091FFBAB95008CB537 /* Build configuration list for PBXAggregateTarget "UniversalRinety" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DF0F10A1FFBAB95008CB537 /* Debug */,
+				6DF0F10B1FFBAB95008CB537 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
