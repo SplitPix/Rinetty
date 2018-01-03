@@ -1,7 +1,7 @@
 #!/bin/sh
 
 SCRIPT_DIR=$(dirname "$0")
-BOOTSTRAP="$SCRIPT_DIR/bootstrap"
+BOOTSTRAP="$SCRIPT_DIR/bootstrap.sh"
 CACHED_CARTFILE="Carthage/Cartfile.resolved"
 
 if [ -e "$CACHED_CARTFILE" ]; then
