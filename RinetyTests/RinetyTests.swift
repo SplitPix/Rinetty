@@ -20,9 +20,7 @@ class RinetyTests: XCTestCase {
     }
     
     func testExample() {
-        let tt: TT = TT()
-        tt.name =  "test"
-       XCTAssert(tt.name == "")
+       XCTAssert(2 == 1)
     }
     
     func testPerformanceExample() {
